@@ -32,15 +32,16 @@ function playGame(){
         }
     }
 
-    playGame();
+}
 
-    for(let i=0;i<5;i++){
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice,computerChoice);
-    }
+playGame();
+for(let i=0;i<5;i++){
+    let humanChoice = getHumanChoice();
+    let computerChoice = getComputerChoice();
+    playRound(humanChoice,computerChoice);
+}
 
-    /*console.log(`Player Score: ${humanScore}`);
+/*console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
     if(humanScore>computerScore){
         console.log("Player Wins!");
@@ -48,7 +49,6 @@ function playGame(){
     else{
         console.log("Computer Wins");
     }*/
-}
 
 
 
