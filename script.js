@@ -12,34 +12,36 @@ function getHumanChoice(){
     return 0;
 }
 
-function playGame(){
-    let humanScore = 0;
-    let computerScore = 0;
-    
-    function playRound(humanChoice,computerChoice){
-        humanSelection = humanChoice.toLowerCase();
-        computerSelection = computerChoice.toLowerCase();
-        if(humanSelection==computerSelection){
-            console.log(`Tie! ${humanSelection} and ${computerSelection} are equal`);
-        }
-        if((humanSelection=="paper" && computerSelection=="rock") && (humanSelection=="rock" && computerSelection=="scissor") && (humanSelection=="scissors" && computerSelection=="paper")){
-            console.log(`You Win! ${humanSelection} beats ${computerSelection}`);
-            humanScore++;
-        }
-        else{
-            console.log(`You Lose! ${computerSelection} beats ${humanSelection}`);
-            computerScore++;
-        }
-    }
+let humanScore = 0;
+let computerScore = 0;
 
+function playGame(){
+    
+    for(let i=0;i<5;i++){
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        playRound(humanChoice,computerChoice);
+    }  
+}
+
+function playRound(humanChoice,computerChoice){
+    humanSelection = humanChoice.toLowerCase();
+    computerSelection = computerChoice.toLowerCase();
+    if(humanSelection==computerSelection){
+        console.log(`Tie! ${humanSelection} and ${computerSelection} are equal`);
+    }
+    else if((humanSelection=="paper" && computerSelection=="rock") && (humanSelection=="rock" && computerSelection=="scissor") && (humanSelection=="scissors" && computerSelection=="paper")){
+        console.log(`You Win! ${humanSelection} beats ${computerSelection}`);
+        humanScore++;
+    }
+    else{
+        console.log(`You Lose! ${computerSelection} beats ${humanSelection}`);
+        computerScore++;
+    }
 }
 
 playGame();
-for(let i=0;i<5;i++){
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
-    playRound(humanChoice,computerChoice);
-}
+
 
 /*console.log(`Player Score: ${humanScore}`);
     console.log(`Computer Score: ${computerScore}`);
