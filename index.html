@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js"></script>
+    <div id="title">Rock, Paper & Scissors</div>
+    <div id="gamebox">
+        <div id="player_box">
+            <div class="player_title">You</div>
+            <img id="player_img" src="Images/rock.png">
+        </div>
+        <div id="versus">
+            <img id ="versus_img" src="Images/Versus.png">
+        </div>
+        <div id="comp_box">
+            <div class="player_title">Computer</div>
+            <img id="bot_img" src="Images/rock.png">
+        </div>
+    </div>
+    <div id="round-results"></div>
+    <div class="controls">
+        <button class="ctrl_btn" id="rock_btn">Rock</button>
+        <button class="ctrl_btn" id="paper_btn">Paper</button>
+        <button class="ctrl_btn" id="scissors_btn">Scissors</button>
+    </div>
+    <div class="score">
+        <p id="human_score">You: 0</p>
+        <p id="computer_score">Computer: 0</p>
+    </div>
+    <script src="script.js"></script>   
 </body>
 </html>
