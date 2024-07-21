@@ -1,0 +1,97 @@
+body{
+    background-image: url('Images/Background.jpg')
+}
+
+#title{
+    text-align: center;
+    font-family: 'Yatra One';
+    font-size: 50px;
+    margin-top: 1%;
+}
+
+#gamebox{
+    margin-top:0%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-style:solid;
+    border-color: black;
+    position: relative;
+}
+
+#player_box{
+    margin-left:2%;
+}
+
+#comp_box{
+    margin-right: 2%;
+}
+
+.player_title{
+    font-family: 'Yatra One';
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 5%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+#versus{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#versus_img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+#round-results{
+    font-family: 'Yatra One';
+    font-size: 23px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.controls{
+    margin-top: 1%;
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+    border-color:grey;
+
+}
+
+.ctrl_btn{
+    font-family: 'Yatra One';
+    font-size: 30px;
+    background-color: transparent;
+    width:200px;
+    height: 90px;
+    will-change: transform;
+    transition: transform 450ms;
+    cursor: pointer;
+}
+
+.ctrl_btn:hover{
+    transition: transform 120ms;
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.score{
+    text-align:center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media(max-width: 768px){
+    #gamebox{
+        width:50%;
+    }
+}
+
