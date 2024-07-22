@@ -61,13 +61,13 @@ function updateScore(humanChoice,computerChoice){
         result.textContent = `You Win! ${humanSelection} beats ${computerSelection}`;
         console.log(`You Win! ${humanSelection} beats ${computerSelection}`);
         humanScore++;
-        document.getElementById('human_score').textContent = `You: ${humanScore}`;
+        document.getElementById('human_score').textContent = `${humanScore} - `;
     }
     else{
         result.textContent = `You Lose! ${computerSelection} beats ${humanSelection}`;
         console.log(`You Lose! ${computerSelection} beats ${humanSelection}`);
         computerScore++;
-        document.getElementById('computer_score').textContent = `Computer: ${computerScore}`;
+        document.getElementById('computer_score').textContent = `${computerScore}`;
     }
 }
 
